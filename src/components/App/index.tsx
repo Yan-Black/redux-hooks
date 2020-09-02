@@ -1,14 +1,16 @@
 import * as React from 'react';
+import { useDispatch } from 'react-redux';
+import { increase, decrease } from '../../containers/App/actions';
 
-import View from '../../containers/View';
-import { AppProps } from './models';
+import View from '../View';
 
-const App: React.FunctionComponent<AppProps> = ({ decrease, increase }) => {
+const App: React.FunctionComponent = () => {
+  const dispatch = useDispatch();
   const onClickDecrease: React.MouseEventHandler = () => {
-    decrease();
+    dispatch(decrease());
   };
   const onClickIncrease: React.MouseEventHandler = () => {
-    increase();
+    dispatch(increase());
   };
 
   return (

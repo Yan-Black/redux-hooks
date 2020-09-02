@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 
-import { increase, decrease } from './actions';
+import {
+  increase, decrease, enable, disable,
+} from './actions';
 import App from '../../components/App';
 
 const mapStateToProps = (state) => ({
@@ -11,6 +13,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   increase,
   decrease,
+  enable,
+  disable,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

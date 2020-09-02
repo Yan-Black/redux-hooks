@@ -5,3 +5,11 @@ export const increase = () => ({
 export const decrease = () => ({
   type: 'DECREMENT',
 });
+
+export const disable = () => ({
+  type: 'DISABLED',
+})
+
+export const enable = () => ({
+  type: 'ENABLE',
+})

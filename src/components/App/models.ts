@@ -1,6 +1,7 @@
 export type AppProps = {
-  title: string;
   count: number;
   increase: () => any;
   decrease: () => any;
+  enable: () => any;
+  disable: () => any;
 };
